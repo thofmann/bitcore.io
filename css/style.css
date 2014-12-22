@@ -204,12 +204,12 @@ body {
   border-bottom: 1px solid #464646;
 }
 #header.invert #logo {
-  width: 178px;
-  height: 52px;
+  width: 140px;
+  height: 41px;
   background-image: url("images/logo-invert.png");
-  -webkit-background-size: 178px 52px;
-  -moz-background-size: 178px 52px;
-  background-size: 178px 52px;
+  -webkit-background-size: 140px 41px;
+  -moz-background-size: 140px 41px;
+  background-size: 140px 41px;
 }
 @media (max-width: 768px) {
   #header.invert #logo {
@@ -256,8 +256,8 @@ body {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  width: 178px;
-  height: 52px;
+  width: 140px;
+  height: 41px;
   background-image: url("images/logo.png");
   display: block;
   -webkit-transition: 0.5s;
@@ -267,8 +267,8 @@ body {
 }
 #main-nav-toggle {
   float: right;
-  width: 52px;
-  height: 52px;
+  width: 41px;
+  height: 41px;
   text-align: center;
   color: #999;
   cursor: pointer;
@@ -329,7 +329,7 @@ body {
     float: right;
     display: block;
     margin: 0;
-    margin-top: 12px;
+    margin-top: 8px;
   }
 }
 @media (min-width: 769px) {
@@ -357,6 +357,15 @@ body {
   background-repeat: no-repeat;
   background-position: 0 7px;
   padding-left: 25px;
+}
+.main-nav-link.github:hover {
+  background-position: 0 -21px;
+}
+.main-nav-link.github {
+  background-image: url("images/githubcat-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+  padding-left: 31px;
 }
 .main-nav-link.docs {
   background-image: url("images/doc-icon.svg");
@@ -440,21 +449,32 @@ body {
   content: "\f002";
 }
 #page-banner {
-  padding: 30px 0;
-  text-align: center;
+  padding: 25px 0;
 }
 @media (min-width: 769px) {
   #page-banner {
-    padding: 40px 0;
+    padding: 30px 0;
     text-align: left;
   }
 }
 #page-banner-inner {
   position: relative;
 }
+#page-title.api {
+  background-image: url("images/api-title-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+  padding-left: 35px;
+}
+#page-title.docs {
+  background-image: url("images/doc-single-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+  padding-left: 32px;
+}
 #page-title {
   color: #555;
-  font: 300 35px "Ubuntu", "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 300 32px "Ubuntu", "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-shadow: 1px 0 #eee;
   line-height: 1em;
 }
