@@ -99,7 +99,7 @@ Bitcore provides full support for BIP32, allowing for many key management schema
 <h2 id="Hierarichically_Derived_Keys">Hierarichically Derived Keys</h2>
 <p>Bitcore provides full support for <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" target="_blank" rel="external">BIP32</a>, allowing for many key management schemas that benefit from this property.  Please be sure to read and understand the basic concepts and the warnings on that BIP before using these classes.</p>
 <h2 id="HDPrivateKey">HDPrivateKey</h2>
-<p>An instance of a <a href="privatekey.md">PrivateKey</a> that also contains information required to derive child keys.</p>
+<p>An instance of a <a href="privatekey.html">PrivateKey</a> that also contains information required to derive child keys.</p>
 <p>Sample usage:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hdPrivateKey = <span class="keyword">new</span> HDPrivateKey();</div><div class="line"><span class="keyword">var</span> retrieved = <span class="keyword">new</span> HDPrivateKey(<span class="string">'xpriv...'</span>);</div><div class="line"><span class="keyword">var</span> derived = privateKey.derive(<span class="string">"m/0'"</span>);</div><div class="line"><span class="keyword">var</span> derivedByNumber = privateKey.derive(<span class="number">1</span>).derive(<span class="number">2</span>, <span class="literal">true</span>);</div><div class="line"><span class="keyword">var</span> derivedByArgument = privateKey.derive(<span class="string">"m/1/2'"</span>);</div><div class="line">assert(derivedByNumber.xprivkey === derivedByArgument.xprivkey);</div><div class="line"></div><div class="line"><span class="keyword">var</span> address = <span class="keyword">new</span> Address(privateKey.publicKey, Networks.livenet);</div><div class="line"><span class="keyword">var</span> redeem = <span class="keyword">new</span> Transaction().from(output).to(target, <span class="number">10000</span>).sign(derived.privateKey);</div></pre></td></tr></table></figure>
 
@@ -110,7 +110,7 @@ Bitcore provides full support for BIP32, allowing for many key management schema
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-22T18:49:14.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-23T02:23:26.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       

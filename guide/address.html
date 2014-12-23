@@ -102,10 +102,10 @@ Instantiate an Ad">
 <h2 id="Description">Description</h2>
 <p>Represents a bitcoin Address. Addresses are the most popular way to make bitcoin transactions. See <a href="https://en.bitcoin.it/wiki/Address" target="_blank" rel="external">the official Bitcoin Wiki</a> for technical background information.</p>
 <h2 id="Instantiate_an_Address">Instantiate an Address</h2>
-<p>To be able to receive bitcoins an address is needed, but in order to spend them a private key is necessary. Please take a look at the <a href="privatekey.md"><code>PrivateKey</code></a> docs for more information about exporting and saving a key.  </p>
+<p>To be able to receive bitcoins an address is needed, but in order to spend them a private key is necessary. Please take a look at the <a href="privatekey.html"><code>PrivateKey</code></a> docs for more information about exporting and saving a key.  </p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> privateKey = <span class="keyword">new</span> PrivateKey();</div><div class="line"><span class="keyword">var</span> address = privateKey.toAddress();</div></pre></td></tr></table></figure>
 
-<p>You can also instantiate an Address from a String, <a href="publickey.md">PublicKey</a>, or <a href="hierarchical.md">HDPublicKey</a>, in case you are not the owner of the private key.</p>
+<p>You can also instantiate an Address from a String, <a href="publickey.html">PublicKey</a>, or <a href="hierarchical.html">HDPublicKey</a>, in case you are not the owner of the private key.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// from a string</span></div><div class="line"><span class="keyword">var</span> address = Address.fromString(<span class="string">'mwkXG8NnB2snbqWTcpNiK6qqGHm1LebHDc'</span>);</div><div class="line"></div><div class="line"><span class="comment">// a default network address from a public key</span></div><div class="line"><span class="keyword">var</span> publicKey = PublicKey(privateKey);</div><div class="line"><span class="keyword">var</span> address = <span class="keyword">new</span> Address(publicKey);</div><div class="line"><span class="comment">// alternative interface</span></div><div class="line"><span class="keyword">var</span> address = Address.fromPublicKey(publicKey);</div><div class="line"></div><div class="line"><span class="comment">// a testnet address from a public key</span></div><div class="line"><span class="keyword">var</span> publicKey = <span class="keyword">new</span> PublicKey(privateKey);</div><div class="line"><span class="keyword">var</span> address = <span class="keyword">new</span> Address(publicKey, Networks.testnet);</div></pre></td></tr></table></figure>
 
 <h2 id="Validating_an_Address">Validating an Address</h2>
@@ -117,7 +117,7 @@ Instantiate an Ad">
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-22T18:49:13.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-23T02:23:26.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       

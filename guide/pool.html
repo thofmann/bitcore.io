@@ -100,15 +100,15 @@ The quickest way to get connected is to ru">
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Pool">Pool</h1>
 <h2 id="Pool-1">Pool</h2>
-<p>A pool maintains a connection of <a href="peer.md">Peers</a>. A pool will discover peers via DNS seeds, as well as when peer addresses are announced through the network.</p>
+<p>A pool maintains a connection of <a href="peer.html">Peers</a>. A pool will discover peers via DNS seeds, as well as when peer addresses are announced through the network.</p>
 <p>The quickest way to get connected is to run the following:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> bitcore = <span class="built_in">require</span>(<span class="string">'bitcore'</span>);</div><div class="line"><span class="keyword">var</span> Pool = bitcore.transport.Pool;</div><div class="line"><span class="keyword">var</span> Networks = bitcore.Networks;</div><div class="line"></div><div class="line"><span class="keyword">var</span> pool = <span class="keyword">new</span> Pool(Networks.livenet);</div><div class="line"></div><div class="line"><span class="comment">// connect to the network</span></div><div class="line">pool.connect();</div><div class="line"></div><div class="line"><span class="comment">// attach peer events</span></div><div class="line">pool.on(<span class="string">'peerinv'</span>, <span class="function"><span class="keyword">function</span><span class="params">(peer, message)</span> </span>{</div><div class="line">  <span class="comment">// a new peer message has arrived</span></div><div class="line">});</div><div class="line"></div><div class="line"><span class="comment">// will disconnect all peers</span></div><div class="line">pool.disconnect()</div></pre></td></tr></table></figure>
 
-<p>For more information about Peer events, please read the <a href="peer.md">Peer</a> documentation. Peer events are relayed to the pool, a peer event <code>inv</code> in the pool would be <code>peerinv</code>. When a peer is disconnected the pool will try to connect to the list of known addresses to maintain connection.</p>
+<p>For more information about Peer events, please read the <a href="peer.html">Peer</a> documentation. Peer events are relayed to the pool, a peer event <code>inv</code> in the pool would be <code>peerinv</code>. When a peer is disconnected the pool will try to connect to the list of known addresses to maintain connection.</p>
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-22T18:49:15.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-23T02:23:27.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       

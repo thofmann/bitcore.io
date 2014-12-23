@@ -97,7 +97,7 @@ Represents a bitcoin public key and is needed to be able to receive bitcoin, as 
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Public_Key">Public Key</h1>
 <h2 id="Description">Description</h2>
-<p>Represents a bitcoin public key and is needed to be able to receive bitcoin, as is usually represented as a bitcoin <a href="address.md">Address</a>, see the official <a href="https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses" target="_blank" rel="external">Bitcoin Wiki</a>. A PublicKey in Bitcore is an immutable object and can be instantiated from a <a href="crypto.md">Point</a>, string, <a href="privatekey.md">PrivateKey</a>, Buffer and a <a href="crypto.md">BN</a>.</p>
+<p>Represents a bitcoin public key and is needed to be able to receive bitcoin, as is usually represented as a bitcoin <a href="address.html">Address</a>, see the official <a href="https://en.bitcoin.it/wiki/Technical_background_of_version_1_Bitcoin_addresses" target="_blank" rel="external">Bitcoin Wiki</a>. A PublicKey in Bitcore is an immutable object and can be instantiated from a <a href="crypto.html">Point</a>, string, <a href="privatekey.html">PrivateKey</a>, Buffer and a <a href="crypto.html">BN</a>.</p>
 <h2 id="Instantiate_a_Public_Key">Instantiate a Public Key</h2>
 <p>Here is how to instantiate a public key:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> privateKey = <span class="keyword">new</span> PrivateKey();</div><div class="line"></div><div class="line"><span class="comment">// from a private key</span></div><div class="line"><span class="keyword">var</span> publicKey = <span class="keyword">new</span> PublicKey(privateKey);</div><div class="line"></div><div class="line"><span class="comment">// from a der hex encoded string</span></div><div class="line"><span class="keyword">var</span> publicKey2 = <span class="keyword">new</span> PublicKey(<span class="string">'02a1633cafcc01ebfb6d78e39f687a1f0995c62fc95f51ead10a02ee0be551b5dc'</span>);</div></pre></td></tr></table></figure>
@@ -110,7 +110,7 @@ Represents a bitcoin public key and is needed to be able to receive bitcoin, as 
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-22T18:49:15.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-23T02:23:27.000Z" itemprop="dateModified">Last updated: Dec 22 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
