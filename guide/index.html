@@ -27,7 +27,7 @@
   <link href="//fonts.googleapis.com/css?family=Ubuntu%20Mono:regular,bold&subset=Latin" rel="stylesheet" type="text/css">
   <link rel="alternative" href="/atom.xml" title="Bitcore" type="application/atom+xml">
   <meta name="description" content="Bitcore v0.8
-Welcome to the documentation for bictore, a pure and powerful JavaScript Bitcoin API.
+Welcome to the documentation for bitcore, a pure and powerful JavaScript Bitcoin API.
 Principles
 Bitcoin is a powerful new peer-to-peer platform for the next generation of financial techn">
 <meta property="og:type" content="website">
@@ -35,13 +35,13 @@ Bitcoin is a powerful new peer-to-peer platform for the next generation of finan
 <meta property="og:url" content="http://bitcore.io/guide/index.html">
 <meta property="og:site_name" content="Bitcore">
 <meta property="og:description" content="Bitcore v0.8
-Welcome to the documentation for bictore, a pure and powerful JavaScript Bitcoin API.
+Welcome to the documentation for bitcore, a pure and powerful JavaScript Bitcoin API.
 Principles
 Bitcoin is a powerful new peer-to-peer platform for the next generation of financial techn">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Bitcore">
 <meta name="twitter:description" content="Bitcore v0.8
-Welcome to the documentation for bictore, a pure and powerful JavaScript Bitcoin API.
+Welcome to the documentation for bitcore, a pure and powerful JavaScript Bitcoin API.
 Principles
 Bitcoin is a powerful new peer-to-peer platform for the next generation of financial techn">
 <meta name="twitter:site" content="@bitpay">
@@ -99,7 +99,7 @@ Bitcoin is a powerful new peer-to-peer platform for the next generation of finan
       </div>
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Bitcore_v0-8">Bitcore v0.8</h1>
-<p>Welcome to the documentation for bictore, a pure and powerful JavaScript Bitcoin API.</p>
+<p>Welcome to the documentation for bitcore, a pure and powerful JavaScript Bitcoin API.</p>
 <h2 id="Principles">Principles</h2>
 <p>Bitcoin is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Bitcoin network allows for highly resilient bitcoin infrastructure, and the developer community needs reliable, open-source tools to implement bitcoin apps and services. Bitcore provides a powerful API to Bitcoin.</p>
 <p>To get started, just <code>npm install bitcore</code> or <code>bower install bitcore</code>.</p>
@@ -149,15 +149,15 @@ Bitcoin is a powerful new peer-to-peer platform for the next generation of finan
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> paymentInfo = {</div><div class="line">  address: <span class="string">'1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx'</span>,</div><div class="line">  amount: <span class="number">120000</span> <span class="comment">//satoshis</span></div><div class="line">};</div><div class="line"><span class="keyword">var</span> uri = <span class="keyword">new</span> bitcore.URI(paymentInfo).toString();</div></pre></td></tr></table></figure>
 
 <h2 id="Create_a_Transaction">Create a Transaction</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .<span class="keyword">from</span>(utxos)          <span class="comment">// Feed information about what unspend outputs one can use</span></div><div class="line">    .<span class="keyword">to</span>(address, amount)  <span class="comment">// Add an output with the given amount of satoshis</span></div><div class="line">    .change(address)      <span class="comment">// Sets up a change address where the rest of the funds will go</span></div><div class="line">    .sign(privkeySet)     <span class="comment">// Signs all the inputs it can</span></div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .<span class="keyword">from</span>(utxos)          <span class="comment">// Feed information about what unspent outputs one can use</span></div><div class="line">    .<span class="keyword">to</span>(address, amount)  <span class="comment">// Add an output with the given amount of satoshis</span></div><div class="line">    .change(address)      <span class="comment">// Sets up a change address where the rest of the funds will go</span></div><div class="line">    .sign(privkeySet)     <span class="comment">// Signs all the inputs it can</span></div></pre></td></tr></table></figure>
 
 <h2 id="Connect_to_the_Network">Connect to the Network</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> peer = <span class="keyword">new</span> Peer(<span class="string">'5.9.85.34'</span>);</div><div class="line"></div><div class="line">peer.on(<span class="string">'inv'</span>, <span class="function"><span class="keyword">function</span><span class="params">(message)</span> </span>{</div><div class="line">  <span class="comment">// new invetory</span></div><div class="line">});</div><div class="line"></div><div class="line">peer.connect();</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> peer = <span class="keyword">new</span> Peer(<span class="string">'5.9.85.34'</span>);</div><div class="line"></div><div class="line">peer.on(<span class="string">'inv'</span>, <span class="function"><span class="keyword">function</span><span class="params">(message)</span> </span>{</div><div class="line">  <span class="comment">// new inventory</span></div><div class="line">});</div><div class="line"></div><div class="line">peer.connect();</div></pre></td></tr></table></figure>
 
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-23T16:11:44.000Z" itemprop="dateModified">Last updated: Dec 23 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-23T16:25:09.000Z" itemprop="dateModified">Last updated: Dec 23 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
