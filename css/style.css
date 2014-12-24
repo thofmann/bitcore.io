@@ -358,6 +358,11 @@ body {
   background-position: 0 7px;
   padding-left: 25px;
 }
+@media (max-width: 768px) {
+  .main-nav-link.api {
+    background-image: none;
+  }
+}
 .main-nav-link.github:hover {
   background-position: 0 -21px;
 }
@@ -367,11 +372,21 @@ body {
   background-position: 0 7px;
   padding-left: 31px;
 }
+@media (max-width: 768px) {
+  .main-nav-link.github {
+    background-image: none;
+  }
+}
 .main-nav-link.docs {
   background-image: url("images/doc-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 5px;
   padding-left: 25px;
+}
+@media (max-width: 768px) {
+  .main-nav-link.docs {
+    background-image: none;
+  }
 }
 .main-nav-link {
   display: block;
@@ -466,11 +481,43 @@ body {
   background-position: 0 3px;
   padding-left: 35px;
 }
+@media (max-width: 505px) {
+  #page-title.api {
+    padding-left: 30px;
+    -webkit-background-size: 20px;
+    -moz-background-size: 20px;
+    background-size: 20px;
+  }
+}
+@media (max-width: 328px) {
+  #page-title.api {
+    padding-left: 23px;
+    -webkit-background-size: 14px;
+    -moz-background-size: 14px;
+    background-size: 14px;
+  }
+}
 #page-title.docs {
   background-image: url("images/doc-single-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 3px;
   padding-left: 32px;
+}
+@media (max-width: 505px) {
+  #page-title.docs {
+    padding-left: 30px;
+    -webkit-background-size: 20px;
+    -moz-background-size: 20px;
+    background-size: 20px;
+  }
+}
+@media (max-width: 328px) {
+  #page-title.docs {
+    padding-left: 23px;
+    -webkit-background-size: 14px;
+    -moz-background-size: 14px;
+    background-size: 14px;
+  }
 }
 #page-title {
   color: #555;
@@ -1721,6 +1768,11 @@ a.post-title:hover {
   height: 40px;
   -webkit-border-radius: 0;
   border-radius: 0;
+}
+@media (max-width: 400px) {
+  #banner-getting-started-input {
+    width: 168px;
+  }
 }
 #banner-getting-started-btn {
   border-top-right-radius: 3px;
