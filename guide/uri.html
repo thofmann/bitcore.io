@@ -111,7 +111,7 @@
 
 <h2 id="URI_Validation">URI Validation</h2>
 <p>The main use that we expect you’ll have for the <code>URI</code> class in bitcore is validating and parsing bitcoin URIs. A <code>URI</code> instance exposes the address as a bitcore <code>Address</code> object and the amount in Satoshis, if present.</p>
-<p>The code for validating uris looks like this:</p>
+<p>The code for validating URIs looks like this:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> uriString = <span class="string">'bitcoin:12A1MyfXbW6RhdRAZEqofac5jCQQjwEPBu?amount=1.2'</span>;</div><div class="line"><span class="keyword">var</span> valid = URI.isValid(uriString);</div><div class="line"><span class="keyword">var</span> uri = <span class="keyword">new</span> URI(uriString);</div><div class="line"><span class="built_in">console</span>.log(uri.address.network, uri.amount); <span class="comment">// 'livenet', 120000000</span></div></pre></td></tr></table></figure>
 
 <h2 id="URI_Parameters">URI Parameters</h2>
@@ -125,7 +125,7 @@
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-24T14:35:16.000Z" itemprop="dateModified">Last updated: Dec 24 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-26T15:00:23.000Z" itemprop="dateModified">Last updated: Dec 26 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       

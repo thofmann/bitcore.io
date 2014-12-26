@@ -105,7 +105,7 @@
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Networks">Networks</h1>
 <h2 id="Description">Description</h2>
-<p>Bitcore provides support for the main bitcoin network as well as for <code>testnet3</code>, the current test blockchain. We encourage the use of <code>Networks.livenet</code> and <code>Networks.testnet</code> as constants. Note that the library sometimes may check for equality against this object. Avoid creating a deep copy of this object and using that.</p>
+<p>Bitcore provides support for the main bitcoin network as well as for <code>testnet3</code>, the current test blockchain. We encourage the use of <code>Networks.livenet</code> and <code>Networks.testnet</code> as constants. Note that the library sometimes may check for equality against this object. Please avoid creating a deep copy of this object.</p>
 <p>The <code>Network</code> namespace has a function, <code>get(...)</code> that returns an instance of a <code>Network</code> or <code>undefined</code>. The only argument to this function is some kind of identifier of the network: either its name, a reference to a Network object, or a number used as a magic constant to identify the network (for example, the value <code>0</code> that gives bitcoin addresses the distinctive <code>&#39;1&#39;</code> at its beginning on livenet, is a <code>0x6F</code> for testnet).</p>
 <h2 id="Setting_the_Default_Network">Setting the Default Network</h2>
 <p>Most projects will only need to work with one of the networks. The value of <code>Networks.defaultNetwork</code> can be set to <code>Networks.testnet</code> if the project will need to only to work on testnet (the default is <code>Networks.livenet</code>).</p>
@@ -117,7 +117,7 @@
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-24T14:35:15.000Z" itemprop="dateModified">Last updated: Dec 24 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-26T15:00:22.000Z" itemprop="dateModified">Last updated: Dec 26 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       

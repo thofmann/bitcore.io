@@ -126,7 +126,7 @@
 
 <h3 id="Pay_to_Script_Hash_(p2sh)">Pay to Script Hash (p2sh)</h3>
 <p>Pay to script hash outputs are scripts that contain the hash of another script, called <code>redeemScript</code>. To spend bitcoins sent in a p2sh output, the spending transaction must provide a script matching the script hash and data which makes the script evaluate to true.  This allows to defer revealing the spending conditions to the moment of spending. It also makes it possible for the receiver to set the conditions to spend those bitcoins. </p>
-<p>Most multisig transactions today use p2sh outputs where the redeemScript is a multisig output.</p>
+<p>Most multisig transactions today use p2sh outputs where the <code>redeemScript</code> is a multisig output.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// create a p2sh multisig output</span></div><div class="line"><span class="keyword">var</span> pubkeys = [</div><div class="line">  <span class="keyword">new</span> PublicKey(<span class="string">'022df8750480ad5b26950b25c7ba79d3e37d75f640f8e5d9bcd5b150a0f85014da'</span>),</div><div class="line">  <span class="keyword">new</span> PublicKey(<span class="string">'03e3818b65bcc73a7d64064106a859cc1a5a728c4345ff0b641209fba0d90de6e9'</span>),</div><div class="line">  <span class="keyword">new</span> PublicKey(<span class="string">'021f2f6e1e50cb6a953935c3601284925decd3fd21bc445712576873fb8c6ebc18'</span>),</div><div class="line">];</div><div class="line"><span class="keyword">var</span> redeemScript = Script.buildMultisigOut(pubkeys, <span class="number">2</span>);</div><div class="line"><span class="keyword">var</span> script = redeemScript.toScriptHashOut();</div><div class="line">assert(script.toString() === <span class="string">'OP_HASH160 20 0x620a6eeaf538ec9eb89b6ae83f2ed8ef98566a03 OP_EQUAL'</span>);</div></pre></td></tr></table></figure>
 
 <h3 id="Data_output">Data output</h3>
@@ -153,7 +153,7 @@
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-24T14:35:16.000Z" itemprop="dateModified">Last updated: Dec 24 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-26T15:00:23.000Z" itemprop="dateModified">Last updated: Dec 26 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       

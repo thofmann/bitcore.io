@@ -106,11 +106,11 @@
         <h1 id="Transaction">Transaction</h1>
 <h2 id="Description">Description</h2>
 <p>Bitcore provides a very simple API for creating transactions. We expect this API to be accessible for developers without knowing the working internals of bitcoin in deep detail. What follows is a small introduction to transactions with some basic knowledge required to use this API.</p>
-<p>A Transaction contains a set of inputs and a set of outputs. Each input contains a reference to another transaction’s output, and a signature that allows the value referenced in that ouput to be used in this transaction.</p>
+<p>A Transaction contains a set of inputs and a set of outputs. Each input contains a reference to another transaction’s output, and a signature that allows the value referenced in that output to be used in this transaction.</p>
 <p>Note also that an output can be used only once. That’s why there’s a concept of “change address” in the bitcoin ecosystem: if an output of 10 BTC is available for me to spend, but I only need to transmit 1 BTC, I’ll create a transaction with two outputs, one with 1 BTC that I want to spend, and the other with 9 BTC to a change address, so I can spend this 9 BTC with another private key that I own.</p>
 <p>So, in order to transmit a valid transaction, you must know what other transactions on the network store outputs that have not been spent and that are available for you to spend (meaning that you have the set of keys that can validate you own those funds). The unspent outputs are usually referred to as “utxo”s.</p>
 <p>Let’s take a look at some very simple transactions:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .from(utxos)          <span class="comment">// Feed information about what unspend outputs one can use</span></div><div class="line">    .to(address, amount)  <span class="comment">// Add an output with the given amount of satoshis</span></div><div class="line">    .change(address)      <span class="comment">// Sets up a change address where the rest of the funds will go</span></div><div class="line">    .sign(privkeySet)     <span class="comment">// Signs all the inputs it can</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .from(utxos)          <span class="comment">// Feed information about what unspent outputs one can use</span></div><div class="line">    .to(address, amount)  <span class="comment">// Add an output with the given amount of satoshis</span></div><div class="line">    .change(address)      <span class="comment">// Sets up a change address where the rest of the funds will go</span></div><div class="line">    .sign(privkeySet)     <span class="comment">// Signs all the inputs it can</span></div></pre></td></tr></table></figure>
 
 <p>Now, this could just be serialized to hexadecimal ASCII values (<code>transaction.serialize()</code>) and sent over to the bitcoind reference client.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bitcoin-cli sendrawtransaction &lt;serialized transaction&gt;</div></pre></td></tr></table></figure>
@@ -149,7 +149,7 @@
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-24T14:35:16.000Z" itemprop="dateModified">Last updated: Dec 24 2014</time>
+        <time id="page-footer-updated" datetime="2014-12-26T15:00:23.000Z" itemprop="dateModified">Last updated: Dec 26 2014</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
