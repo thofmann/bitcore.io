@@ -2,9 +2,9 @@
 <html>
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>ECIES | Bitcore &mdash; A pure and powerful JavaScript Bitcoin library.</title>
+  <title>Insight Explorer | Bitcore &mdash; A pure and powerful JavaScript Bitcoin library.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="canonical" href="http://bitcore.io/guide/ecies.html">
+  <link rel="canonical" href="http://bitcore.io/guide/insight.html">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -30,15 +30,15 @@
   <meta property="og:image" content="/css/images/lava-ball-social.png" />
   <meta name="twitter:image" content="http://bitcore.io/css/images/lava-ball-social.png">
 
-  <meta name="description" content="Uses ECIES symmetric key negotiation from public keys to encrypt arbitrarily long data streams.">
+  <meta name="description" content="Provides an interface to fetch information about the state of the blockchain from a trusted Insight server.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ECIES">
-<meta property="og:url" content="http://bitcore.io/guide/ecies.html">
+<meta property="og:title" content="Insight Explorer">
+<meta property="og:url" content="http://bitcore.io/guide/insight.html">
 <meta property="og:site_name" content="Bitcore">
-<meta property="og:description" content="Uses ECIES symmetric key negotiation from public keys to encrypt arbitrarily long data streams.">
+<meta property="og:description" content="Provides an interface to fetch information about the state of the blockchain from a trusted Insight server.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECIES">
-<meta name="twitter:description" content="Uses ECIES symmetric key negotiation from public keys to encrypt arbitrarily long data streams.">
+<meta name="twitter:title" content="Insight Explorer">
+<meta name="twitter:description" content="Provides an interface to fetch information about the state of the blockchain from a trusted Insight server.">
 <meta name="twitter:site" content="@bitpay">
 
   
@@ -90,7 +90,7 @@
         
         <h1 id="page-title" class="docs" itemprop="name">Documentation</h1>
         
-          <a href="https://github.com/bitpay/bitcore/blob/master/docs/guide/ecies.md" title="Improve this doc" id="page-edit-link"></a>
+          <a href="https://github.com/bitpay/bitcore/blob/master/docs/guide/insight.md" title="Improve this doc" id="page-edit-link"></a>
         
       </div>
     </div>
@@ -100,28 +100,23 @@
     <div class="page-content">
       <div class="toc-wrap">
         <strong class="toc-title">Contents</strong>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ECIES"><span class="toc-number">1.</span> <span class="toc-text">ECIES</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">1.1.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">1.2.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Example"><span class="toc-number">1.3.</span> <span class="toc-text">Example</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Insight"><span class="toc-number">1.</span> <span class="toc-text">Insight</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">1.1.</span> <span class="toc-text">Description</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Retrieving_Unspent_UTXOs_for_an_Address_(or_set_of)"><span class="toc-number">1.1.1.</span> <span class="toc-text">Retrieving Unspent UTXOs for an Address (or set of)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Broadcasting_a_Transaction"><span class="toc-number">1.1.2.</span> <span class="toc-text">Broadcasting a Transaction</span></a></li></ol></li></ol></li></ol>
       </div>
       <div class="page-entry" itemprop="articleBody">
-        <h1 id="ECIES">ECIES</h1>
+        <h1 id="Insight">Insight</h1>
 <h2 id="Description">Description</h2>
-<p>Bitcore implements <a href="http://en.wikipedia.org/wiki/Integrated_Encryption_Scheme" target="_blank" rel="external">Elliptic Curve Integrated Encryption Scheme (ECIES)</a>, which is a public key encryption system that performs bulk encryption on data using a symmetric cipher and a random key.</p>
-<p>For more information refer to the <a href="https://github.com/bitpay/bitcore-ecies" target="_blank" rel="external">bitcore-ecies</a> github repo.</p>
-<h2 id="Installation">Installation</h2>
-<p>ECIES is implemented as a separate module and you must add it to your dependencies:</p>
-<p>For node projects:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm <span class="operator"><span class="keyword">install</span> bitcore-ecies <span class="comment">--save</span></span></div></pre></td></tr></table></figure>
+<p><code>bitcore.transport.explorers.Insight</code> is a simple agent to perform queries to an Insight blockchain explorer. The default servers are <code>https://insight.bitpay.com</code> and <code>https://test-insight.bitpay.com</code>, hosted by BitPay Inc. You can (and we strongly suggest you do) run your own insight server. For more information, head to <a href="https://github.com/bitpay/insight-api" target="_blank" rel="external">https://github.com/bitpay/insight-api</a></p>
+<p>There are currently two methods implemented (the API will grow as features are requested): <code>getUnspentUtxos</code> and <code>broadcast</code>. </p>
+<h3 id="Retrieving_Unspent_UTXOs_for_an_Address_(or_set_of)">Retrieving Unspent UTXOs for an Address (or set of)</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> insight = <span class="keyword">new</span> Insight();</div><div class="line">insight.getUnspentUtxos(<span class="string">'1Bitcoin...'</span>, <span class="function"><span class="keyword">function</span><span class="params">(err, utxos)</span> </span>{</div><div class="line">  <span class="keyword">if</span> (err) {</div><div class="line">    <span class="comment">// Handle errors...</span></div><div class="line">  } <span class="keyword">else</span> {</div><div class="line">    <span class="comment">// Maybe use the UTXOs to create a transaction</span></div><div class="line">  }</div><div class="line">});</div></pre></td></tr></table></figure>
 
-<p>For client-side projects:</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">bower <span class="operator"><span class="keyword">install</span> bitcore-ecies <span class="comment">--save</span></span></div></pre></td></tr></table></figure>
-
-<h2 id="Example">Example</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">var</span> bitcore <span class="subst">=</span> <span class="keyword">require</span>(<span class="string">'bitcore'</span>);</div><div class="line"><span class="built_in">var</span> ECIES <span class="subst">=</span> <span class="keyword">require</span>(<span class="string">'bitcore-ecies'</span>);</div><div class="line"></div><div class="line"><span class="built_in">var</span> alicePrivateKey <span class="subst">=</span> <span class="literal">new</span> bitcore<span class="built_in">.</span>PrivateKey();</div><div class="line"><span class="built_in">var</span> bobPrivateKey <span class="subst">=</span> <span class="literal">new</span> bitcore<span class="built_in">.</span>PrivateKey();</div><div class="line"></div><div class="line"><span class="built_in">var</span> <span class="built_in">data</span> <span class="subst">=</span> <span class="literal">new</span> Buffer(<span class="string">'The is a raw data example'</span>);</div><div class="line"></div><div class="line"><span class="comment">// Encrypt data</span></div><div class="line"><span class="built_in">var</span> cypher1 <span class="subst">=</span> ECIES<span class="built_in">.</span>privateKey(alicePrivateKey)<span class="built_in">.</span>publicKey(bobPrivateKey<span class="built_in">.</span>publicKey);</div><div class="line"><span class="built_in">var</span> encrypted <span class="subst">=</span> cypher<span class="built_in">.</span>encrypt(<span class="built_in">data</span>);</div><div class="line"></div><div class="line"><span class="comment">// Decrypt data</span></div><div class="line"><span class="built_in">var</span> cypher2 <span class="subst">=</span> ECIES<span class="built_in">.</span>privateKey(bobPrivateKey)<span class="built_in">.</span>publicKey(alicePrivateKey<span class="built_in">.</span>publicKey);</div><div class="line"><span class="built_in">var</span> decrypted <span class="subst">=</span> cypher<span class="built_in">.</span>decrypt(encrypted);</div><div class="line"></div><div class="line">assert(<span class="built_in">data</span><span class="built_in">.</span>toString(), decrypted<span class="built_in">.</span>toString());</div></pre></td></tr></table></figure>
+<h3 id="Broadcasting_a_Transaction">Broadcasting a Transaction</h3>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> insight = <span class="keyword">new</span> Insight();</div><div class="line">insight.broadcast(tx, <span class="function"><span class="keyword">function</span><span class="params">(err, returnedTxId)</span> </span>{</div><div class="line">  <span class="keyword">if</span> (err) {</div><div class="line">    <span class="comment">// Handle errors...</span></div><div class="line">  } <span class="keyword">else</span> {</div><div class="line">    <span class="comment">// Mark the transaction as broadcasted</span></div><div class="line">  }</div><div class="line">});</div></pre></td></tr></table></figure>
 
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2015-01-07T16:23:01.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
+        <time id="page-footer-updated" datetime="2015-01-07T16:23:02.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
@@ -161,7 +156,7 @@
     
       <a href="/guide/crypto.html" class="sidebar-link">Crypto</a>
     
-      <a href="/guide/ecies.html" class="sidebar-link current">ECIES</a>
+      <a href="/guide/ecies.html" class="sidebar-link">ECIES</a>
     
       <a href="/guide/encoding.html" class="sidebar-link">Encoding</a>
     
@@ -182,7 +177,7 @@
     
       <a href="/guide/pool.html" class="sidebar-link">Pool</a>
     
-      <a href="/guide/insight.html" class="sidebar-link">Insight Explorer</a>
+      <a href="/guide/insight.html" class="sidebar-link current">Insight Explorer</a>
     
   
 

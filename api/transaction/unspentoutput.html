@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Bitcore &mdash; A pure and powerful JavaScript Bitcoin library.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="canonical" href="http://bitcore.io/api/crypto/point.html">
+  <link rel="canonical" href="http://bitcore.io/api/transaction/unspentoutput.html">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -33,7 +33,7 @@
   <meta name="description" content="A pure and powerful JavaScript Bitcoin library.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bitcore">
-<meta property="og:url" content="http://bitcore.io/api/crypto/point.html">
+<meta property="og:url" content="http://bitcore.io/api/transaction/unspentoutput.html">
 <meta property="og:site_name" content="Bitcore">
 <meta property="og:description" content="A pure and powerful JavaScript Bitcoin library.">
 <meta name="twitter:card" content="summary">
@@ -90,7 +90,7 @@
         
         <h1 id="page-title" class="api" itemprop="name">API Reference</h1>
         
-          <a href="https://github.com/bitpay/bitcore/blob/master/lib/crypto/point.js" title="Improve this doc" id="page-edit-link"></a>
+          <a href="https://github.com/bitpay/bitcore/blob/master/lib/transaction/unspentoutput.js" title="Improve this doc" id="page-edit-link"></a>
         
       </div>
     </div>
@@ -100,64 +100,65 @@
     <div class="page-content">
       <div class="toc-wrap">
         <strong class="toc-title">Contents</strong>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#class:_Point"><span class="toc-number">1.</span> <span class="toc-text">class: Point</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#new_Point(x,_y)"><span class="toc-number">1.1.</span> <span class="toc-text">new Point(x, y)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Point-fromX(odd,_x)"><span class="toc-number">1.2.</span> <span class="toc-text">Point.fromX(odd, x)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Point-getG()"><span class="toc-number">1.3.</span> <span class="toc-text">Point.getG()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Point-getN()"><span class="toc-number">1.4.</span> <span class="toc-text">Point.getN()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#point-getX()"><span class="toc-number">1.5.</span> <span class="toc-text">point.getX()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#point-getY()"><span class="toc-number">1.6.</span> <span class="toc-text">point.getY()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#point-validate(An)"><span class="toc-number">1.7.</span> <span class="toc-text">point.validate(An)</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#class:_UnspentOutput"><span class="toc-number">1.</span> <span class="toc-text">class: UnspentOutput</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#new_UnspentOutput(data)"><span class="toc-number">1.1.</span> <span class="toc-text">new UnspentOutput(data)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UnspentOutput-fromJSON"><span class="toc-number">1.2.</span> <span class="toc-text">UnspentOutput.fromJSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unspentOutput-inspect()"><span class="toc-number">1.3.</span> <span class="toc-text">unspentOutput.inspect()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unspentOutput-toString()"><span class="toc-number">1.4.</span> <span class="toc-text">unspentOutput.toString()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unspentOutput-toJSON()"><span class="toc-number">1.5.</span> <span class="toc-text">unspentOutput.toJSON()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#unspentOutput-toObject()"><span class="toc-number">1.6.</span> <span class="toc-text">unspentOutput.toObject()</span></a></li></ol></li></ol>
       </div>
       <div class="page-entry" itemprop="articleBody">
-        <p><a name="Point"></a></p>
-<h1 id="class:_Point">class: Point</h1>
-<p><strong>Extends</strong>: <code>elliptic.curve.point</code><br><strong>Members</strong></p>
+        <p><a name="UnspentOutput"></a></p>
+<h1 id="class:_UnspentOutput">class: UnspentOutput</h1>
+<p><strong>Members</strong></p>
 <ul>
-<li><a href="#Point">class: Point</a><ul>
-<li><a href="#new_Point">new Point(x, y)</a></li>
-<li><a href="#Point.fromX">Point.fromX(odd, x)</a></li>
-<li><a href="#Point.getG">Point.getG()</a></li>
-<li><a href="#Point.getN">Point.getN()</a></li>
-<li><a href="#Point#getX">point.getX()</a></li>
-<li><a href="#Point#getY">point.getY()</a></li>
-<li><a href="#Point#validate">point.validate(An)</a></li>
+<li><a href="#UnspentOutput">class: UnspentOutput</a><ul>
+<li><a href="#new_UnspentOutput">new UnspentOutput(data)</a></li>
+<li><a href="#UnspentOutput.fromJSON">UnspentOutput.fromJSON</a></li>
+<li><a href="#UnspentOutput#inspect">unspentOutput.inspect()</a></li>
+<li><a href="#UnspentOutput#toString">unspentOutput.toString()</a></li>
+<li><a href="#UnspentOutput#toJSON">unspentOutput.toJSON()</a></li>
+<li><a href="#UnspentOutput#toObject">unspentOutput.toObject()</a></li>
 </ul>
 </li>
 </ul>
-<p><a name="new_Point"></a></p>
-<h2 id="new_Point(x,_y)">new Point(x, y)</h2>
-<p>Instantiate a valid secp256k1 Point from the X and Y coordinates.</p>
+<p><a name="new_UnspentOutput"></a></p>
+<h2 id="new_UnspentOutput(data)">new UnspentOutput(data)</h2>
+<p>Represents an unspent output information: its script, associated amount and address,<br>transaction id and output index.</p>
 <p><strong>Params</strong></p>
 <ul>
-<li>x <code>BN</code> | <code>String</code> - The X coordinate  </li>
-<li>y <code>BN</code> | <code>String</code> - The Y coordinate  </li>
+<li>data <code>object</code>  <ul>
+<li>txid <code>string</code> - the previous transaction id  </li>
+<li>[txId] <code>string</code> - alias for <code>txid</code>  </li>
+<li>vout <code>number</code> - the index in the transaction  </li>
+<li>[outputIndex] <code>number</code> - alias for <code>vout</code>  </li>
+<li>scriptPubKey <code>string</code> | <code>Script</code> - the script that must be resolved to release the funds  </li>
+<li>script <code>string</code> | <code>Script</code> - alias for <code>scriptPubKey</code>  </li>
+<li>amount <code>number</code> - amount of bitcoins associated  </li>
+<li>[satoshis] <code>number</code> - alias for <code>amount</code>, but expressed in satoshis (1 BTC = 1e8 satoshis)  </li>
+<li>address <code>string</code> | <code>Address</code> - the associated address to the script, if provided  </li>
 </ul>
-<p><strong>Extends</strong>: <code>elliptic.curve.point</code><br><strong>Type</strong>: <code>Error</code><br><strong>Returns</strong>: <a href="#Point">Point</a> - An instance of Point<br><a name="Point.fromX"></a></p>
-<h2 id="Point-fromX(odd,_x)">Point.fromX(odd, x)</h2>
-<p>Instantiate a valid secp256k1 Point from only the X coordinate</p>
+</li>
+</ul>
+<p><a name="UnspentOutput.fromJSON"></a></p>
+<h2 id="UnspentOutput-fromJSON">UnspentOutput.fromJSON</h2>
+<p>Deserialize an UnspentOutput from an object or JSON string</p>
 <p><strong>Params</strong></p>
 <ul>
-<li>odd <code>boolean</code> - If the Y coordinate is odd  </li>
-<li>x <code>BN</code> | <code>String</code> - The X coordinate  </li>
+<li>data <code>object</code> | <code>string</code>  </li>
 </ul>
-<p><strong>Type</strong>: <code>Error</code><br><strong>Returns</strong>: <a href="#Point">Point</a> - An instance of Point<br><a name="Point.getG"></a></p>
-<h2 id="Point-getG()">Point.getG()</h2>
-<p>Will return a secp256k1 ECDSA base point.</p>
-<p><strong>Returns</strong>: <a href="#Point">Point</a> - An instance of the base point.<br><a name="Point.getN"></a></p>
-<h2 id="Point-getN()">Point.getN()</h2>
-<p>Will return the max of range of valid private keys as governed by the secp256k1 ECDSA standard.</p>
-<p><strong>Returns</strong>: <code>BN</code> - A BN instance of the number of points on the curve<br><a name="Point#getX"></a></p>
-<h2 id="point-getX()">point.getX()</h2>
-<p>Will return the X coordinate of the Point</p>
-<p><strong>Returns</strong>: <code>BN</code> - A BN instance of the X coordinate<br><a name="Point#getY"></a></p>
-<h2 id="point-getY()">point.getY()</h2>
-<p>Will return the Y coordinate of the Point</p>
-<p><strong>Returns</strong>: <code>BN</code> - A BN instance of the Y coordinate<br><a name="Point#validate"></a></p>
-<h2 id="point-validate(An)">point.validate(An)</h2>
-<p>Will determine if the point is valid</p>
-<p><strong>Params</strong></p>
-<ul>
-<li>An <code><a href="#Point">Point</a></code> - instance of Point  </li>
-</ul>
-<p><strong>Type</strong>: <code>Error</code><br><strong>Returns</strong>: <a href="#Point">Point</a> - An instance of the same Point  </p>
+<p><strong>Returns</strong>:  - UnspentOutput<br><a name="UnspentOutput#inspect"></a></p>
+<h2 id="unspentOutput-inspect()">unspentOutput.inspect()</h2>
+<p>Provide an informative output when displaying this object in the console</p>
+<p><strong>Returns</strong>:  - string<br><a name="UnspentOutput#toString"></a></p>
+<h2 id="unspentOutput-toString()">unspentOutput.toString()</h2>
+<p>String representation: just “txid:index”</p>
+<p><strong>Returns</strong>:  - string<br><a name="UnspentOutput#toJSON"></a></p>
+<h2 id="unspentOutput-toJSON()">unspentOutput.toJSON()</h2>
+<p>Retrieve a string representation of this object</p>
+<p><strong>Returns</strong>: <code>string</code><br><a name="UnspentOutput#toObject"></a></p>
+<h2 id="unspentOutput-toObject()">unspentOutput.toObject()</h2>
+<p>Returns a plain object (no prototype or methods) with the associated infor for this output</p>
+<p><strong>Returns</strong>: <code>object</code>  </p>
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2015-01-07T16:23:02.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
+        <time id="page-footer-updated" datetime="2015-01-07T16:23:03.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
@@ -192,7 +193,7 @@
   
     <strong class="sidebar-title">Crypto</strong>
     
-      <a href="/api/crypto/point.html" class="sidebar-link current">Point</a>
+      <a href="/api/crypto/point.html" class="sidebar-link">Point</a>
     
   
     <strong class="sidebar-title">Script</strong>
@@ -204,7 +205,7 @@
     
       <a href="/api/transaction/transaction.html" class="sidebar-link">Transaction</a>
     
-      <a href="/api/transaction/unspentoutput.html" class="sidebar-link">UnspentOutput</a>
+      <a href="/api/transaction/unspentoutput.html" class="sidebar-link current">UnspentOutput</a>
     
       <a href="/api/transaction/sighash.html" class="sidebar-link">Sig Hash</a>
     

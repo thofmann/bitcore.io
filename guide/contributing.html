@@ -100,7 +100,7 @@
     <div class="page-content">
       <div class="toc-wrap">
         <strong class="toc-title">Contents</strong>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Contributing_to_Bitcore"><span class="toc-number">1.</span> <span class="toc-text">Contributing to Bitcore</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Checklist"><span class="toc-number">1.1.</span> <span class="toc-text">Quick Checklist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Design_Guidelines"><span class="toc-number">1.2.</span> <span class="toc-text">Design Guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#D1_-_Naming_Matters"><span class="toc-number">1.2.1.</span> <span class="toc-text">D1 - Naming Matters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D2_-_Tests"><span class="toc-number">1.2.2.</span> <span class="toc-text">D2 - Tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D3_-_Robustness_Principle"><span class="toc-number">1.2.3.</span> <span class="toc-text">D3 - Robustness Principle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D4_-_Consistency_Everywhere"><span class="toc-number">1.2.4.</span> <span class="toc-text">D4 - Consistency Everywhere</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Style_Guidelines"><span class="toc-number">1.3.</span> <span class="toc-text">Style Guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#G0_-_General:_Default_to_Felixge’s_Style_Guide"><span class="toc-number">1.3.1.</span> <span class="toc-text">G0 - General: Default to Felixge’s Style Guide</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G1_-_General:_No_Magic_Numbers"><span class="toc-number">1.3.2.</span> <span class="toc-text">G1 - General: No Magic Numbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G2_-_General:_Internal_Objects_Should_be_Instances"><span class="toc-number">1.3.3.</span> <span class="toc-text">G2 - General: Internal Objects Should be Instances</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G3_-_General:_Internal_Amounts_Must_be_Integers_Representing_Satoshis"><span class="toc-number">1.3.4.</span> <span class="toc-text">G3 - General: Internal Amounts Must be Integers Representing Satoshis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G4_-_General:_Internal_Network_References_Must_be_Network_Instances"><span class="toc-number">1.3.5.</span> <span class="toc-text">G4 - General: Internal Network References Must be Network Instances</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G5_-_General:_Objects_Should_Display_Nicely_in_the_Console"><span class="toc-number">1.3.6.</span> <span class="toc-text">G5 - General: Objects Should Display Nicely in the Console</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G6_-_General:_Naming_Utility_Namespaces"><span class="toc-number">1.3.7.</span> <span class="toc-text">G6 - General: Naming Utility Namespaces</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#G7_-_General:_Standard_Methods"><span class="toc-number">1.3.8.</span> <span class="toc-text">G7 - General: Standard Methods</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E1_-_Errors:_Use_bitcore-Errors"><span class="toc-number">1.3.9.</span> <span class="toc-text">E1 - Errors: Use bitcore.Errors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#E2_-_Errors:_Provide_a_getValidationError_Static_Method_for_Classes"><span class="toc-number">1.3.10.</span> <span class="toc-text">E2 - Errors: Provide a getValidationError Static Method for Classes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I1_-_Interface:_Make_Code_that_Fails_Early"><span class="toc-number">1.3.11.</span> <span class="toc-text">I1 - Interface: Make Code that Fails Early</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I2_-_Interface:_Permissive_Constructors"><span class="toc-number">1.3.12.</span> <span class="toc-text">I2 - Interface: Permissive Constructors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I3_-_Interface:_Method_Chaining"><span class="toc-number">1.3.13.</span> <span class="toc-text">I3 - Interface: Method Chaining</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I4_-_Interface:_Copy_Constructors"><span class="toc-number">1.3.14.</span> <span class="toc-text">I4 - Interface: Copy Constructors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#I5_-_Interface:_No_New_Keyword_for_Constructors"><span class="toc-number">1.3.15.</span> <span class="toc-text">I5 - Interface: No New Keyword for Constructors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T1_-_Testing:_Tests_Must_be_Written_Elegantly"><span class="toc-number">1.3.16.</span> <span class="toc-text">T1 - Testing: Tests Must be Written Elegantly</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T2_-_Testing:_Tests_Must_not_be_Random"><span class="toc-number">1.3.17.</span> <span class="toc-text">T2 - Testing: Tests Must not be Random</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T3_-_Testing:_Require_‘bitcore’_and_Look_up_Classes_from_There"><span class="toc-number">1.3.18.</span> <span class="toc-text">T3 - Testing: Require ‘bitcore’ and Look up Classes from There</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#T4_-_Testing:_Data_for_Tests_Included_in_a_JSON_File"><span class="toc-number">1.3.19.</span> <span class="toc-text">T4 - Testing: Data for Tests Included in a JSON File</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pull_Request_Workflow"><span class="toc-number">1.4.</span> <span class="toc-text">Pull Request Workflow</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Contributing_to_Bitcore"><span class="toc-number">1.</span> <span class="toc-text">Contributing to Bitcore</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Checklist"><span class="toc-number">1.1.</span> <span class="toc-text">Quick Checklist</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Design_Guidelines"><span class="toc-number">1.2.</span> <span class="toc-text">Design Guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#D1_-_Naming_Matters"><span class="toc-number">1.2.1.</span> <span class="toc-text">D1 - Naming Matters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D2_-_Tests"><span class="toc-number">1.2.2.</span> <span class="toc-text">D2 - Tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D3_-_Robustness_Principle"><span class="toc-number">1.2.3.</span> <span class="toc-text">D3 - Robustness Principle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#D4_-_Consistency_Everywhere"><span class="toc-number">1.2.4.</span> <span class="toc-text">D4 - Consistency Everywhere</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Style_Guidelines"><span class="toc-number">1.3.</span> <span class="toc-text">Style Guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#General"><span class="toc-number">1.3.1.</span> <span class="toc-text">General</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#G0_-_Default_to_Felixge’s_Style_Guide"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">G0 - Default to Felixge’s Style Guide</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G1_-_No_Magic_Numbers"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">G1 - No Magic Numbers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G2_-_Internal_Objects_Should_be_Instances"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">G2 - Internal Objects Should be Instances</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G3_-_Internal_Amounts_Must_be_Integers_Representing_Satoshis"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">G3 - Internal Amounts Must be Integers Representing Satoshis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G4_-_Internal_Network_References_Must_be_Network_Instances"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">G4 - Internal Network References Must be Network Instances</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G5_-_Objects_Should_Display_Nicely_in_the_Console"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">G5 - Objects Should Display Nicely in the Console</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G6_-_Naming_Utility_Namespaces"><span class="toc-number">1.3.1.7.</span> <span class="toc-text">G6 - Naming Utility Namespaces</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#G7_-_Standard_Methods"><span class="toc-number">1.3.1.8.</span> <span class="toc-text">G7 - Standard Methods</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Errors"><span class="toc-number">1.3.2.</span> <span class="toc-text">Errors</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#E1_-_Use_bitcore-Errors"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">E1 - Use bitcore.Errors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#E2_-_Provide_a_getValidationError_Static_Method_for_Classes"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">E2 - Provide a getValidationError Static Method for Classes</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interface"><span class="toc-number">1.3.3.</span> <span class="toc-text">Interface</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#I1_-_Code_that_Fails_Early"><span class="toc-number">1.3.3.1.</span> <span class="toc-text">I1 - Code that Fails Early</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I2_-_Permissive_Constructors"><span class="toc-number">1.3.3.2.</span> <span class="toc-text">I2 - Permissive Constructors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I3_-_Method_Chaining"><span class="toc-number">1.3.3.3.</span> <span class="toc-text">I3 - Method Chaining</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I4_-_Copy_Constructors"><span class="toc-number">1.3.3.4.</span> <span class="toc-text">I4 - Copy Constructors</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#I5_-_No_New_Keyword_for_Constructors"><span class="toc-number">1.3.3.5.</span> <span class="toc-text">I5 - No New Keyword for Constructors</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Testing"><span class="toc-number">1.3.4.</span> <span class="toc-text">Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#T1_-_Tests_Must_be_Written_Elegantly"><span class="toc-number">1.3.4.1.</span> <span class="toc-text">T1 - Tests Must be Written Elegantly</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T2_-_Tests_Must_not_be_Random"><span class="toc-number">1.3.4.2.</span> <span class="toc-text">T2 - Tests Must not be Random</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T3_-_Require_‘bitcore’_and_Look_up_Classes_from_There"><span class="toc-number">1.3.4.3.</span> <span class="toc-text">T3 - Require ‘bitcore’ and Look up Classes from There</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T4_-_Data_for_Tests_Included_in_a_JSON_File"><span class="toc-number">1.3.4.4.</span> <span class="toc-text">T4 - Data for Tests Included in a JSON File</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Documentation"><span class="toc-number">1.3.5.</span> <span class="toc-text">Documentation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#D1_-_Guide_and_API_Reference"><span class="toc-number">1.3.5.1.</span> <span class="toc-text">D1 - Guide and API Reference</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#D2_-_Proofread"><span class="toc-number">1.3.5.2.</span> <span class="toc-text">D2 - Proofread</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pull_Request_Workflow"><span class="toc-number">1.4.</span> <span class="toc-text">Pull Request Workflow</span></a></li></ol></li></ol>
       </div>
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Contributing_to_Bitcore">Contributing to Bitcore</h1>
@@ -128,19 +128,20 @@
 <p>Consistency on the way classes are used is paramount to allow an easier understanding of the library.</p>
 <h2 id="Style_Guidelines">Style Guidelines</h2>
 <p>The design guidelines have quite a high abstraction level. These style guidelines are more concrete and easier to apply, and also more opinionated. The design guidelines mentioned above are the way we think about general software development and we believe they should be present in any software project.</p>
-<h3 id="G0_-_General:_Default_to_Felixge’s_Style_Guide">G0 - General: Default to Felixge’s Style Guide</h3>
+<h3 id="General">General</h3>
+<h4 id="G0_-_Default_to_Felixge’s_Style_Guide">G0 - Default to Felixge’s Style Guide</h4>
 <p>Follow this Node.js Style Guide: <a href="https://github.com/felixge/node-style-guide#nodejs-style-guide" target="_blank" rel="external">https://github.com/felixge/node-style-guide#nodejs-style-guide</a></p>
-<h3 id="G1_-_General:_No_Magic_Numbers">G1 - General: No Magic Numbers</h3>
+<h4 id="G1_-_No_Magic_Numbers">G1 - No Magic Numbers</h4>
 <p>Avoid constants in the code as much as possible. Magic strings are also magic numbers.</p>
-<h3 id="G2_-_General:_Internal_Objects_Should_be_Instances">G2 - General: Internal Objects Should be Instances</h3>
+<h4 id="G2_-_Internal_Objects_Should_be_Instances">G2 - Internal Objects Should be Instances</h4>
 <p>If a class has a <code>publicKey</code> member, for instance, that should be a <code>PublicKey</code> instance.</p>
-<h3 id="G3_-_General:_Internal_Amounts_Must_be_Integers_Representing_Satoshis">G3 - General: Internal Amounts Must be Integers Representing Satoshis</h3>
+<h4 id="G3_-_Internal_Amounts_Must_be_Integers_Representing_Satoshis">G3 - Internal Amounts Must be Integers Representing Satoshis</h4>
 <p>Avoid representation errors by always dealing with satoshis. For conversion for frontends, use the <code>Unit</code> class.</p>
-<h3 id="G4_-_General:_Internal_Network_References_Must_be_Network_Instances">G4 - General: Internal Network References Must be Network Instances</h3>
+<h4 id="G4_-_Internal_Network_References_Must_be_Network_Instances">G4 - Internal Network References Must be Network Instances</h4>
 <p>A special case for <a href="#g2---general-internal-objects-should-be-instances">G2</a> all network references must be <code>Network</code> instances (see <code>lib/network.js</code>), but when returned to the user, its <code>.name</code> property should be used.</p>
-<h3 id="G5_-_General:_Objects_Should_Display_Nicely_in_the_Console">G5 - General: Objects Should Display Nicely in the Console</h3>
+<h4 id="G5_-_Objects_Should_Display_Nicely_in_the_Console">G5 - Objects Should Display Nicely in the Console</h4>
 <p>Write a <code>.inspect()</code> method so an instance can be easily debugged in the console.</p>
-<h3 id="G6_-_General:_Naming_Utility_Namespaces">G6 - General: Naming Utility Namespaces</h3>
+<h4 id="G6_-_Naming_Utility_Namespaces">G6 - Naming Utility Namespaces</h4>
 <p>Name them in CamelCase, as they are namespaces.</p>
 <p>DO:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> BufferUtil = <span class="built_in">require</span>(<span class="string">'./util/buffer'</span>);</div></pre></td></tr></table></figure>
@@ -148,7 +149,7 @@
 <p>DON’T:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bufferUtil = <span class="built_in">require</span>(<span class="string">'./util/buffer'</span>);</div></pre></td></tr></table></figure>
 
-<h3 id="G7_-_General:_Standard_Methods">G7 - General: Standard Methods</h3>
+<h4 id="G7_-_Standard_Methods">G7 - Standard Methods</h4>
 <p>When possible, bitcore objects should have standard methods on an instance prototype:</p>
 <ul>
 <li><code>toObject</code> - A plain JavaScript object that can be JSON stringified</li>
@@ -162,7 +163,8 @@
 <li><code>fromString</code> - Should be able to instantiate with output from <code>toString</code></li>
 <li><code>fromBuffer</code> - Should likewise be able to instantiate from output from <code>toBuffer</code></li>
 </ul>
-<h3 id="E1_-_Errors:_Use_bitcore-Errors">E1 - Errors: Use bitcore.Errors</h3>
+<h3 id="Errors">Errors</h3>
+<h4 id="E1_-_Use_bitcore-Errors">E1 - Use bitcore.Errors</h4>
 <p>We’ve designed a structure for Errors to follow and are slowly migrating to it.</p>
 <p>Usage:</p>
 <ul>
@@ -171,19 +173,20 @@
 <li>Whenever a new class is created, add a generic error for that class in <code>lib/errors/spec.js</code>.</li>
 <li>Specific errors for that class should subclass that error. Take a look at the structure in <code>lib/errors/spec.js</code>, it should be clear how subclasses are generated from that file.</li>
 </ul>
-<h3 id="E2_-_Errors:_Provide_a_getValidationError_Static_Method_for_Classes">E2 - Errors: Provide a <code>getValidationError</code> Static Method for Classes</h3>
-<h3 id="I1_-_Interface:_Make_Code_that_Fails_Early">I1 - Interface: Make Code that Fails Early</h3>
+<h4 id="E2_-_Provide_a_getValidationError_Static_Method_for_Classes">E2 - Provide a <code>getValidationError</code> Static Method for Classes</h4>
+<h3 id="Interface">Interface</h3>
+<h4 id="I1_-_Code_that_Fails_Early">I1 - Code that Fails Early</h4>
 <p>In order to deal with JavaScript’s weak typing and confusing errors, we ask our code to fail as soon as possible when an unexpected input was provided.</p>
 <p>There’s a module called <code>util/preconditions</code>, loosely based on <code>preconditions.js</code>, based on <code>guava</code>, that we use for state and argument checking. It should be trivial to use. We recommend using it on all methods, in order to improve robustness and consistency.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$.checkState(something === anotherthing, <span class="string">'Expected something to be anotherthing'</span>);</div><div class="line">$.checkArgument(something &lt; <span class="number">100</span>, <span class="string">'something'</span>, <span class="string">'must be less than 100'</span>);</div><div class="line">$.checkArgumentType(something, PrivateKey, <span class="string">'something'</span>); <span class="comment">// The third argument is a helper to mention the name of the argument</span></div><div class="line">$.checkArgumentType(something, PrivateKey); <span class="comment">// but it's optional (will show up as "(unknown argument)")</span></div></pre></td></tr></table></figure>
 
-<h3 id="I2_-_Interface:_Permissive_Constructors">I2 - Interface: Permissive Constructors</h3>
+<h4 id="I2_-_Permissive_Constructors">I2 - Permissive Constructors</h4>
 <p>Most classes have static methods named <code>fromBuffer</code>, <code>fromString</code>, <code>fromJSON</code>. Whenever one of those methods is provided, the constructor for that class should also be able to detect the type of the arguments and call the appropriate method.</p>
-<h3 id="I3_-_Interface:_Method_Chaining">I3 - Interface: Method Chaining</h3>
+<h4 id="I3_-_Method_Chaining">I3 - Method Chaining</h4>
 <p>For classes that have a mutable state, most of the methods that can be chained <em>SHOULD</em> be chained, allowing for interfaces that read well, like:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .from(utxo)</div><div class="line">    .to(address, amount)</div><div class="line">    .change(address)</div><div class="line">    .sign(privkey);</div></pre></td></tr></table></figure>
 
-<h3 id="I4_-_Interface:_Copy_Constructors">I4 - Interface: Copy Constructors</h3>
+<h4 id="I4_-_Copy_Constructors">I4 - Copy Constructors</h4>
 <p>Constructors, when provided an instance of the same class, should:</p>
 <ul>
 <li>Return the same object, if the instances of this class are immutable</li>
@@ -192,16 +195,17 @@
 <p>Examples:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyMutableClass</span><span class="params">(arg)</span> </span>{</div><div class="line">  <span class="keyword">if</span> (arg <span class="keyword">instanceof</span> MyMutableClass) {</div><div class="line">    <span class="keyword">return</span> MyMutableClass._deepCopy(arg);</div><div class="line">  }</div><div class="line">  <span class="comment">// ...</span></div><div class="line">}</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ImmutableClass</span><span class="params">(arg)</span> </span>{</div><div class="line">  <span class="keyword">if</span> (arg <span class="keyword">instanceof</span> ImmutableClass) {</div><div class="line">    <span class="keyword">return</span> arg;</div><div class="line">  }</div><div class="line">  <span class="comment">// ...</span></div><div class="line">}</div></pre></td></tr></table></figure>
 
-<h3 id="I5_-_Interface:_No_New_Keyword_for_Constructors">I5 - Interface: No New Keyword for Constructors</h3>
+<h4 id="I5_-_No_New_Keyword_for_Constructors">I5 - No New Keyword for Constructors</h4>
 <p>Constructors should not require to be called with <code>new</code>. This rule is not heavily enforced, but is a “nice to have”.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">NoNewRequired</span><span class="params">(args)</span> </span>{</div><div class="line">  <span class="keyword">if</span> (!(<span class="keyword">this</span> <span class="keyword">instanceof</span> NoNewRequired)) {</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> NoNewRequired(args);</div><div class="line">  }</div><div class="line">  <span class="comment">// ...</span></div><div class="line">}</div></pre></td></tr></table></figure>
 
-<h3 id="T1_-_Testing:_Tests_Must_be_Written_Elegantly">T1 - Testing: Tests Must be Written Elegantly</h3>
+<h3 id="Testing">Testing</h3>
+<h4 id="T1_-_Tests_Must_be_Written_Elegantly">T1 - Tests Must be Written Elegantly</h4>
 <p>Style guidelines are not relaxed for tests. Tests are a good way to show how to use the library, and maintaining them is extremely necessary.</p>
 <p>Don’t write long tests, write helper functions to make them be as short and concise as possible (they should take just a few lines each), and use good variable names.</p>
-<h3 id="T2_-_Testing:_Tests_Must_not_be_Random">T2 - Testing: Tests Must not be Random</h3>
+<h4 id="T2_-_Tests_Must_not_be_Random">T2 - Tests Must not be Random</h4>
 <p>Inputs for tests should not be generated randomly. Also, the type and structure of outputs should be checked.</p>
-<h3 id="T3_-_Testing:_Require_‘bitcore’_and_Look_up_Classes_from_There">T3 - Testing: Require ‘bitcore’ and Look up Classes from There</h3>
+<h4 id="T3_-_Require_‘bitcore’_and_Look_up_Classes_from_There">T3 - Require ‘bitcore’ and Look up Classes from There</h4>
 <p>This helps to make tests more useful as examples, and more independent of where they are placed. This also helps prevent forgetting to include all submodules in the bitcore object.</p>
 <p>DO:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bitcore = <span class="built_in">require</span>(<span class="string">'../'</span>);</div><div class="line"><span class="keyword">var</span> PublicKey = bitcore.PublicKey;</div></pre></td></tr></table></figure>
@@ -209,8 +213,13 @@
 <p>DON’T:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> PublicKey = <span class="built_in">require</span>(<span class="string">'../lib/publickey'</span>);</div></pre></td></tr></table></figure>
 
-<h3 id="T4_-_Testing:_Data_for_Tests_Included_in_a_JSON_File">T4 - Testing: Data for Tests Included in a JSON File</h3>
+<h4 id="T4_-_Data_for_Tests_Included_in_a_JSON_File">T4 - Data for Tests Included in a JSON File</h4>
 <p>If possible, data for tests should be included in a JSON file in the <code>test/data</code> directory. This improves interoperability with other libraries and keeps tests cleaner.</p>
+<h3 id="Documentation">Documentation</h3>
+<h4 id="D1_-_Guide_and_API_Reference">D1 - Guide and API Reference</h4>
+<p>All modules should include a developer guide and API reference. The API reference documentation is generated using JSDOC. Each function that exposes a public API should include a description, @return and @param, as appropriate. The general documentation guide for the module should be located in the <code>docs/guide</code> directory and is written in GitHub Flavored Markdown.</p>
+<h4 id="D2_-_Proofread">D2 - Proofread</h4>
+<p>Please proofread documentation to avoid unintentional spelling and grammatical mistakes before submitting a pull request.</p>
 <h2 id="Pull_Request_Workflow">Pull Request Workflow</h2>
 <p>Our workflow is based on GitHub’s pull requests. We use feature branches, prepended with: <code>test</code>, <code>feature</code>, <code>fix</code>, <code>refactor</code>, or <code>remove</code> according to the change the branch introduces. Some examples for such branches are:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git checkout -b test/some-module</div><div class="line">git checkout -b feature/some-new-stuff</div><div class="line">git checkout -b fix/some-bug</div><div class="line">git checkout -b remove/some-file</div></pre></td></tr></table></figure>
@@ -229,7 +238,7 @@
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2014-12-26T15:00:24.000Z" itemprop="dateModified">Last updated: Dec 26 2014</time>
+        <time id="page-footer-updated" datetime="2015-01-07T16:23:03.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
@@ -260,6 +269,8 @@
     
       <a href="/guide/script.html" class="sidebar-link">Script</a>
     
+      <a href="/guide/unspentoutput.html" class="sidebar-link">UnspentOutput</a>
+    
       <a href="/guide/transaction.html" class="sidebar-link">Transaction</a>
     
   
@@ -288,6 +299,8 @@
     
       <a href="/guide/pool.html" class="sidebar-link">Pool</a>
     
+      <a href="/guide/insight.html" class="sidebar-link">Insight Explorer</a>
+    
   
 
 
@@ -301,7 +314,7 @@
   <div class="outer">
     <div class="inner">
       <div id="footer-copyright">
-        <p>bitcore™ &copy; 2013-2014 BitPay, Inc. bitcore is released under the MIT license.</p>
+        <p>bitcore™ &copy; 2013-2015 BitPay, Inc. bitcore is released under the MIT license.</p>
       </div>
       <div id="footer-links">
         <a href="https://twitter.com/bitpay" id="footer-link-twitter" class="footer-link" target="_blank"><span>Twitter</span></a>
@@ -310,6 +323,7 @@
     </div>
   </div>
 </footer>
+
   
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/js/retina.min.js" type="text/javascript"></script>
