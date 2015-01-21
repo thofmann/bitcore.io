@@ -90,7 +90,7 @@
         
         <h1 id="page-title" class="api" itemprop="name">API Reference</h1>
         
-          <a href="https://github.com/bitpay/bitcore/blob/master/lib/index.js" title="Improve this doc" id="page-edit-link"></a>
+          <a href="https://github.com/bitpay/bitcore.io/blob/master/api/index.md" title="Improve this doc" id="page-edit-link"></a>
         
       </div>
     </div>
@@ -105,27 +105,27 @@
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Examples">Examples</h1>
 <h2 id="Create_a_Private_Key">Create a Private Key</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> privKey = <span class="keyword">new</span> bitcore.PrivateKey();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> privKey = <span class="keyword">new</span> bitcore.PrivateKey();</div></pre></td></tr></table></figure>
 
 <h2 id="Create_an_Address">Create an Address</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> privKey = <span class="keyword">new</span> bitcore.PrivateKey();</div><div class="line"><span class="keyword">var</span> address = privKey.toAddress();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> privKey = <span class="keyword">new</span> bitcore.PrivateKey();</div><div class="line"><span class="keyword">var</span> address = privKey.toAddress();</div></pre></td></tr></table></figure>
 
 <h2 id="Create_a_Multisig_Address">Create a Multisig Address</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Build a 2-of-3 address from public keys</span></div><div class="line"><span class="keyword">var</span> P2SHAddress = <span class="keyword">new</span> bitcore.Address([publicKey1, publicKey2, publicKey3], <span class="number">2</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Build a 2-of-3 address from public keys</span></div><div class="line"><span class="keyword">var</span> P2SHAddress = <span class="keyword">new</span> bitcore.Address([publicKey1, publicKey2, publicKey3], <span class="number">2</span>);</div></pre></td></tr></table></figure>
 
 <h2 id="Request_a_Payment">Request a Payment</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> paymentInfo = {</div><div class="line">  address: <span class="string">'1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx'</span>,</div><div class="line">  amount: <span class="number">120000</span> <span class="comment">//satoshis</span></div><div class="line">};</div><div class="line"><span class="keyword">var</span> uri = <span class="keyword">new</span> bitcore.URI(paymentInfo).toString();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> paymentInfo = {</div><div class="line">  address: <span class="string">'1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx'</span>,</div><div class="line">  amount: <span class="number">120000</span> <span class="comment">//satoshis</span></div><div class="line">};</div><div class="line"><span class="keyword">var</span> uri = <span class="keyword">new</span> bitcore.URI(paymentInfo).toString();</div></pre></td></tr></table></figure>
 
 <h2 id="Create_a_Transaction">Create a Transaction</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .<span class="keyword">from</span>(utxos)          <span class="comment">// Feed information about what unspend outputs one can use</span></div><div class="line">    .<span class="keyword">to</span>(address, amount)  <span class="comment">// Add an output with the given amount of satoshis</span></div><div class="line">    .change(address)      <span class="comment">// Sets up a change address where the rest of the funds will go</span></div><div class="line">    .sign(privkeySet)     <span class="comment">// Signs all the inputs it can</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> transaction = <span class="keyword">new</span> Transaction()</div><div class="line">    .from(utxos)          <span class="comment">// Feed information about what unspend outputs one can use</span></div><div class="line">    .to(address, amount)  <span class="comment">// Add an output with the given amount of satoshis</span></div><div class="line">    .change(address)      <span class="comment">// Sets up a change address where the rest of the funds will go</span></div><div class="line">    .sign(privkeySet)     <span class="comment">// Signs all the inputs it can</span></div></pre></td></tr></table></figure>
 
 <h2 id="Connect_to_the_Network">Connect to the Network</h2>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> peer = <span class="keyword">new</span> Peer(<span class="string">'5.9.85.34'</span>);</div><div class="line"></div><div class="line">peer.on(<span class="string">'inv'</span>, <span class="function"><span class="keyword">function</span><span class="params">(message)</span> </span>{</div><div class="line">  <span class="comment">// new invetory</span></div><div class="line">});</div><div class="line"></div><div class="line">peer.connect();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> peer = <span class="keyword">new</span> Peer(<span class="string">'5.9.85.34'</span>);</div><div class="line"></div><div class="line">peer.on(<span class="string">'inv'</span>, <span class="function"><span class="keyword">function</span><span class="params">(message)</span> </span>{</div><div class="line">  <span class="comment">// new invetory</span></div><div class="line">});</div><div class="line"></div><div class="line">peer.connect();</div></pre></td></tr></table></figure>
 
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2015-01-07T20:56:16.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
+        <time id="page-footer-updated" datetime="2015-01-21T19:10:11.000Z" itemprop="dateModified">Last updated: Jan 21 2015</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
@@ -135,7 +135,7 @@
   
 
   
-    <strong class="sidebar-title">Main</strong>
+    <strong class="sidebar-title">Bitcore</strong>
     
       <a href="/api/address.html" class="sidebar-link">Address</a>
     
@@ -157,35 +157,47 @@
     
       <a href="/api/uri.html" class="sidebar-link">Uri</a>
     
-  
-    <strong class="sidebar-title">Crypto</strong>
-    
-      <a href="/api/crypto/point.html" class="sidebar-link">Point</a>
-    
-  
-    <strong class="sidebar-title">Script</strong>
+      <a href="/api/crypto/point.html" class="sidebar-link">Crypto/Point</a>
     
       <a href="/api/script/script.html" class="sidebar-link">Script</a>
     
-  
-    <strong class="sidebar-title">Transaction</strong>
-    
       <a href="/api/transaction/transaction.html" class="sidebar-link">Transaction</a>
     
-      <a href="/api/transaction/unspentoutput.html" class="sidebar-link">UnspentOutput</a>
+      <a href="/api/transaction/unspentoutput.html" class="sidebar-link">Transaction/UnspentOutput</a>
     
-      <a href="/api/transaction/sighash.html" class="sidebar-link">Sig Hash</a>
+      <a href="/api/transaction/sighash.html" class="sidebar-link">Transaction/Signing</a>
     
   
-    <strong class="sidebar-title">Transport</strong>
+    <strong class="sidebar-title">Peer-to-Peer</strong>
     
-      <a href="/api/transport/peer.html" class="sidebar-link">Peer</a>
+      <a href="/api/module/p2p/messages.html" class="sidebar-link">Messages</a>
     
-      <a href="/api/transport/pool.html" class="sidebar-link">Pool</a>
+      <a href="/api/module/p2p/peer.html" class="sidebar-link">Peer</a>
     
-      <a href="/api/transport/rpc.html" class="sidebar-link">RPC</a>
+      <a href="/api/module/p2p/pool.html" class="sidebar-link">Pool</a>
     
-      <a href="/api/transport/explorers/insight.html" class="sidebar-link">Explorers/Insight</a>
+  
+    <strong class="sidebar-title">Mnemonic</strong>
+    
+      <a href="/api/module/mnemonic/mnemonic.html" class="sidebar-link">Mnemonic</a>
+    
+  
+    <strong class="sidebar-title">Channel</strong>
+    
+      <a href="/api/module/channel/consumer.html" class="sidebar-link">Consumer</a>
+    
+      <a href="/api/module/channel/provider.html" class="sidebar-link">Provider</a>
+    
+      <a href="/api/module/channel/transactions/commitment.html" class="sidebar-link">Transactions/Commitment</a>
+    
+      <a href="/api/module/channel/transactions/payment.html" class="sidebar-link">Transactions/Payment</a>
+    
+      <a href="/api/module/channel/transactions/refund.html" class="sidebar-link">Transactions/Refund</a>
+    
+  
+    <strong class="sidebar-title">Explorers</strong>
+    
+      <a href="/api/module/explorers/insight.html" class="sidebar-link">Insight</a>
     
   
 

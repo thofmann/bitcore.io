@@ -2,9 +2,9 @@
 <html>
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Pool | Bitcore &mdash; A pure and powerful JavaScript Bitcoin library.</title>
+  <title>Bitcore &mdash; A pure and powerful JavaScript Bitcoin library.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="canonical" href="http://bitcore.io/guide/pool.html">
+  <link rel="canonical" href="http://bitcore.io/api/module/channel/transactions/commitment.html">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
@@ -30,15 +30,15 @@
   <meta property="og:image" content="/css/images/lava-ball-social.png" />
   <meta name="twitter:image" content="http://bitcore.io/css/images/lava-ball-social.png">
 
-  <meta name="description" content="A simple interface to create and maintain a set of connections to bitcoin nodes.">
+  <meta name="description" content="A pure and powerful JavaScript Bitcoin library.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Pool">
-<meta property="og:url" content="http://bitcore.io/guide/pool.html">
+<meta property="og:title" content="Bitcore">
+<meta property="og:url" content="http://bitcore.io/api/module/channel/transactions/commitment.html">
 <meta property="og:site_name" content="Bitcore">
-<meta property="og:description" content="A simple interface to create and maintain a set of connections to bitcoin nodes.">
+<meta property="og:description" content="A pure and powerful JavaScript Bitcoin library.">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pool">
-<meta name="twitter:description" content="A simple interface to create and maintain a set of connections to bitcoin nodes.">
+<meta name="twitter:title" content="Bitcore">
+<meta name="twitter:description" content="A pure and powerful JavaScript Bitcoin library.">
 <meta name="twitter:site" content="@bitpay">
 
   
@@ -88,9 +88,11 @@
     <div class="outer">
       <div id="page-banner-inner" class="inner">
         
-        <h1 id="page-title" class="docs" itemprop="name">Documentation</h1>
+        <h1 id="page-title" class="api" itemprop="name">API Reference</h1>
         
-          <a href="https://github.com/bitpay/bitcore/blob/master/docs/guide/pool.md" title="Improve this doc" id="page-edit-link"></a>
+          
+          <a href="https://github.com/bitpay/bitcore-channel/blob/master/lib/transactions/commitment.js" title="Improve this doc" id="page-edit-link"></a>
+
         
       </div>
     </div>
@@ -100,19 +102,37 @@
     <div class="page-content">
       <div class="toc-wrap">
         <strong class="toc-title">Contents</strong>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pool"><span class="toc-number">1.</span> <span class="toc-text">Pool</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#class:_Commitment"><span class="toc-number">1.</span> <span class="toc-text">class: Commitment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#new_Commitment(opts)"><span class="toc-number">1.1.</span> <span class="toc-text">new Commitment(opts)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#commitment-getAddress()"><span class="toc-number">1.2.</span> <span class="toc-text">commitment.getAddress()</span></a></li></ol></li></ol>
       </div>
       <div class="page-entry" itemprop="articleBody">
-        <h1 id="Pool">Pool</h1>
-<p>A pool maintains a connection of <a href="peer.html">Peers</a>. A pool will discover peers via DNS seeds, as well as when peer addresses are announced through the network.</p>
-<p>The quickest way to get connected is to run the following:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> bitcore = <span class="built_in">require</span>(<span class="string">'bitcore'</span>);</div><div class="line"><span class="keyword">var</span> Pool = bitcore.transport.Pool;</div><div class="line"><span class="keyword">var</span> Networks = bitcore.Networks;</div><div class="line"></div><div class="line"><span class="keyword">var</span> pool = <span class="keyword">new</span> Pool(Networks.livenet);</div><div class="line"></div><div class="line"><span class="comment">// connect to the network</span></div><div class="line">pool.connect();</div><div class="line"></div><div class="line"><span class="comment">// attach peer events</span></div><div class="line">pool.on(<span class="string">'peerinv'</span>, <span class="function"><span class="keyword">function</span><span class="params">(peer, message)</span> </span>{</div><div class="line">  <span class="comment">// a new peer message has arrived</span></div><div class="line">});</div><div class="line"></div><div class="line"><span class="comment">// will disconnect all peers</span></div><div class="line">pool.disconnect()</div></pre></td></tr></table></figure>
-
-<p>For more information about Peer events please read the <a href="peer.html">Peer</a> documentation. Peer events are relayed to the pool, a peer event <code>inv</code> in the pool would be <code>peerinv</code>. When a peer is disconnected the pool will try to connect to the list of known addresses to maintain connection.</p>
+        <p><a name="Commitment"></a></p>
+<h1 id="class:_Commitment">class: Commitment</h1>
+<p><strong>Members</strong></p>
+<ul>
+<li><a href="#Commitment">class: Commitment</a><ul>
+<li><a href="#new_Commitment">new Commitment(opts)</a></li>
+<li><a href="#Commitment#getAddress">commitment.getAddress()</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="new_Commitment"></a></p>
+<h2 id="new_Commitment(opts)">new Commitment(opts)</h2>
+<p>A commitment transaction (also referred to as Lock transaction).</p>
+<p><strong>Params</strong></p>
+<ul>
+<li>opts <code>Object</code>  <ul>
+<li>publicKeys <code>Array.&lt;string&gt;</code>  </li>
+<li>network <code>string</code> | <code>bitcore.Network</code> - livenet by default  </li>
+</ul>
+</li>
+</ul>
+<p><a name="Commitment#getAddress"></a></p>
+<h2 id="commitment-getAddress()">commitment.getAddress()</h2>
+<p><strong>Returns</strong>: <code>bitcore.Address</code>  </p>
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2015-01-07T20:56:15.000Z" itemprop="dateModified">Last updated: Jan 7 2015</time>
+        <time id="page-footer-updated" datetime="2015-01-21T19:10:11.000Z" itemprop="dateModified">Last updated: Jan 21 2015</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
@@ -122,58 +142,69 @@
   
 
   
-    <strong class="sidebar-title">Home</strong>
+    <strong class="sidebar-title">Bitcore</strong>
     
-      <a href="/guide/index.html" class="sidebar-link">Get Started</a>
+      <a href="/api/address.html" class="sidebar-link">Address</a>
     
-      <a href="/guide/contributing.html" class="sidebar-link">Contributing</a>
+      <a href="/api/block.html" class="sidebar-link">Block</a>
     
-  
-    <strong class="sidebar-title">Models</strong>
+      <a href="/api/blockheader.html" class="sidebar-link">BlockHeader</a>
     
-      <a href="/guide/address.html" class="sidebar-link">Address</a>
+      <a href="/api/hdprivatekey.html" class="sidebar-link">HDPrivateKey</a>
     
-      <a href="/guide/block.html" class="sidebar-link">Block</a>
+      <a href="/api/hdpublickey.html" class="sidebar-link">HDPublicKey</a>
     
-      <a href="/guide/hierarchical.html" class="sidebar-link">HD Keys</a>
+      <a href="/api/networks.html" class="sidebar-link">Networks</a>
     
-      <a href="/guide/privatekey.html" class="sidebar-link">Private Key</a>
+      <a href="/api/privatekey.html" class="sidebar-link">PrivateKey</a>
     
-      <a href="/guide/publickey.html" class="sidebar-link">Public Key</a>
+      <a href="/api/publickey.html" class="sidebar-link">PublicKey</a>
     
-      <a href="/guide/script.html" class="sidebar-link">Script</a>
+      <a href="/api/unit.html" class="sidebar-link">Unit</a>
     
-      <a href="/guide/unspentoutput.html" class="sidebar-link">Unspent Output</a>
+      <a href="/api/uri.html" class="sidebar-link">Uri</a>
     
-      <a href="/guide/transaction.html" class="sidebar-link">Transaction</a>
+      <a href="/api/crypto/point.html" class="sidebar-link">Crypto/Point</a>
     
-  
-    <strong class="sidebar-title">Helpers</strong>
+      <a href="/api/script/script.html" class="sidebar-link">Script</a>
     
-      <a href="/guide/crypto.html" class="sidebar-link">Crypto</a>
+      <a href="/api/transaction/transaction.html" class="sidebar-link">Transaction</a>
     
-      <a href="/guide/ecies.html" class="sidebar-link">ECIES</a>
+      <a href="/api/transaction/unspentoutput.html" class="sidebar-link">Transaction/UnspentOutput</a>
     
-      <a href="/guide/encoding.html" class="sidebar-link">Encoding</a>
-    
-      <a href="/guide/networks.html" class="sidebar-link">Networks</a>
-    
-      <a href="/guide/paymentprotocol.html" class="sidebar-link">Payment Protocol</a>
-    
-      <a href="/guide/unit.html" class="sidebar-link">Unit</a>
-    
-      <a href="/guide/uri.html" class="sidebar-link">URI</a>
+      <a href="/api/transaction/sighash.html" class="sidebar-link">Transaction/Signing</a>
     
   
-    <strong class="sidebar-title">Networking</strong>
+    <strong class="sidebar-title">Peer-to-Peer</strong>
     
-      <a href="/guide/jsonrpc.html" class="sidebar-link">JSON-RPC</a>
+      <a href="/api/module/p2p/messages.html" class="sidebar-link">Messages</a>
     
-      <a href="/guide/peer.html" class="sidebar-link">Peer</a>
+      <a href="/api/module/p2p/peer.html" class="sidebar-link">Peer</a>
     
-      <a href="/guide/pool.html" class="sidebar-link current">Pool</a>
+      <a href="/api/module/p2p/pool.html" class="sidebar-link">Pool</a>
     
-      <a href="/guide/insight.html" class="sidebar-link">Insight Explorer</a>
+  
+    <strong class="sidebar-title">Mnemonic</strong>
+    
+      <a href="/api/module/mnemonic/mnemonic.html" class="sidebar-link">Mnemonic</a>
+    
+  
+    <strong class="sidebar-title">Channel</strong>
+    
+      <a href="/api/module/channel/consumer.html" class="sidebar-link">Consumer</a>
+    
+      <a href="/api/module/channel/provider.html" class="sidebar-link">Provider</a>
+    
+      <a href="/api/module/channel/transactions/commitment.html" class="sidebar-link current">Transactions/Commitment</a>
+    
+      <a href="/api/module/channel/transactions/payment.html" class="sidebar-link">Transactions/Payment</a>
+    
+      <a href="/api/module/channel/transactions/refund.html" class="sidebar-link">Transactions/Refund</a>
+    
+  
+    <strong class="sidebar-title">Explorers</strong>
+    
+      <a href="/api/module/explorers/insight.html" class="sidebar-link">Insight</a>
     
   
 
