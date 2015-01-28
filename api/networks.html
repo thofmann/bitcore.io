@@ -100,7 +100,7 @@
     <div class="page-content">
       <div class="toc-wrap">
         <strong class="toc-title">Contents</strong>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Index"><span class="toc-number">1.</span> <span class="toc-text">Index</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#class:_Network"><span class="toc-number">2.</span> <span class="toc-text">class: Network</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#new_Network()"><span class="toc-number">2.1.</span> <span class="toc-text">new Network()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network-livenet"><span class="toc-number">2.2.</span> <span class="toc-text">network.livenet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network-testnet"><span class="toc-number">2.3.</span> <span class="toc-text">network.testnet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network-getNetwork"><span class="toc-number">2.4.</span> <span class="toc-text">network.getNetwork</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Network"><span class="toc-number">3.</span> <span class="toc-text">Network</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#network-livenet-1"><span class="toc-number">3.1.</span> <span class="toc-text">network.livenet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network-testnet-1"><span class="toc-number">3.2.</span> <span class="toc-text">network.testnet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network-getNetwork-1"><span class="toc-number">3.3.</span> <span class="toc-text">network.getNetwork</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Index"><span class="toc-number">1.</span> <span class="toc-text">Index</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#class:_Network"><span class="toc-number">2.</span> <span class="toc-text">class: Network</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#new_Network()"><span class="toc-number">2.1.</span> <span class="toc-text">new Network()</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Networks"><span class="toc-number">3.</span> <span class="toc-text">Networks</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#networks-get"><span class="toc-number">3.1.</span> <span class="toc-text">networks.get</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#networks-add"><span class="toc-number">3.2.</span> <span class="toc-text">networks.add</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#networks-livenet"><span class="toc-number">3.3.</span> <span class="toc-text">networks.livenet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#networks-testnet"><span class="toc-number">3.4.</span> <span class="toc-text">networks.testnet</span></a></li></ol></li></ol>
       </div>
       <div class="page-entry" itemprop="articleBody">
         <h1 id="Index">Index</h1>
@@ -108,18 +108,16 @@
 <ul>
 <li><a href="#Network">class: Network</a><ul>
 <li><a href="#new_Network">new Network()</a></li>
-<li><a href="#Network#livenet">network.livenet</a></li>
-<li><a href="#Network#testnet">network.testnet</a></li>
-<li><a href="#Network#getNetwork">network.getNetwork</a></li>
 </ul>
 </li>
 </ul>
 <p><strong>Namespaces</strong></p>
 <ul>
-<li><a href="#Network">Network</a><ul>
-<li><a href="#Network#livenet">network.livenet</a></li>
-<li><a href="#Network#testnet">network.testnet</a></li>
-<li><a href="#Network#getNetwork">network.getNetwork</a></li>
+<li><a href="#Networks">Networks</a><ul>
+<li><a href="#Networks#get">networks.get</a></li>
+<li><a href="#Networks#add">networks.add</a></li>
+<li><a href="#Networks#livenet">networks.livenet</a></li>
+<li><a href="#Networks#testnet">networks.testnet</a></li>
 </ul>
 </li>
 </ul>
@@ -129,53 +127,57 @@
 <ul>
 <li><a href="#Network">class: Network</a><ul>
 <li><a href="#new_Network">new Network()</a></li>
-<li><a href="#Network#livenet">network.livenet</a></li>
-<li><a href="#Network#testnet">network.testnet</a></li>
-<li><a href="#Network#getNetwork">network.getNetwork</a></li>
 </ul>
 </li>
 </ul>
 <p><a name="new_Network"></a></p>
 <h2 id="new_Network()">new Network()</h2>
 <p>A network is merely a map containing values that correspond to version<br>numbers for each bitcoin network. Currently only supporting “livenet”<br>(a.k.a. “mainnet”) and “testnet”.</p>
-<p><a name="Network#livenet"></a></p>
-<h2 id="network-livenet">network.livenet</h2>
-<p><a name="Network#testnet"></a></p>
-<h2 id="network-testnet">network.testnet</h2>
-<p><a name="Network#getNetwork"></a></p>
-<h2 id="network-getNetwork">network.getNetwork</h2>
-<p><strong>Params</strong></p>
-<ul>
-<li>arg <code>string</code> | <code>number</code> | <code><a href="#Network">Network</a></code>  </li>
-<li>key <code>string</code> - if set, only check if the magic number associated with this name matches  </li>
-</ul>
-<p><strong>Returns</strong>:  - Network<br><a name="Network"></a></p>
-<h1 id="Network">Network</h1>
+<p><a name="Networks"></a></p>
+<h1 id="Networks">Networks</h1>
 <p><strong>Members</strong></p>
 <ul>
-<li><a href="#Network">Network</a><ul>
-<li><a href="#Network#livenet">network.livenet</a></li>
-<li><a href="#Network#testnet">network.testnet</a></li>
-<li><a href="#Network#getNetwork">network.getNetwork</a></li>
+<li><a href="#Networks">Networks</a><ul>
+<li><a href="#Networks#get">networks.get</a></li>
+<li><a href="#Networks#add">networks.add</a></li>
+<li><a href="#Networks#livenet">networks.livenet</a></li>
+<li><a href="#Networks#testnet">networks.testnet</a></li>
 </ul>
 </li>
 </ul>
-<p><a name="Network#livenet"></a></p>
-<h2 id="network-livenet-1">network.livenet</h2>
-<p><a name="Network#testnet"></a></p>
-<h2 id="network-testnet-1">network.testnet</h2>
-<p><a name="Network#getNetwork"></a></p>
-<h2 id="network-getNetwork-1">network.getNetwork</h2>
+<p><a name="Networks#get"></a></p>
+<h2 id="networks-get">networks.get</h2>
 <p><strong>Params</strong></p>
 <ul>
 <li>arg <code>string</code> | <code>number</code> | <code><a href="#Network">Network</a></code>  </li>
 <li>key <code>string</code> - if set, only check if the magic number associated with this name matches  </li>
 </ul>
-<p><strong>Returns</strong>:  - Network  </p>
+<p><strong>Returns</strong>:  - Network<br><a name="Networks#add"></a></p>
+<h2 id="networks-add">networks.add</h2>
+<p><strong>Params</strong></p>
+<ul>
+<li>data <code>Object</code>  <ul>
+<li>name <code>String</code> - The name of the network  </li>
+<li>alias <code>String</code> - The aliased name of the network  </li>
+<li>pubkeyhash <code>Number</code> - The publickey hash prefix  </li>
+<li>privatekey <code>Number</code> - The privatekey prefix  </li>
+<li>scripthash <code>Number</code> - The scripthash prefix  </li>
+<li>xpubkey <code>Number</code> - The extended public key magic  </li>
+<li>xprivkey <code>Number</code> - The extended private key magic  </li>
+<li>networkMagic <code>Number</code> - The network magic number  </li>
+<li>port <code>Number</code> - The network port  </li>
+<li>dnsSeeds <code>Array</code> - An array of dns seeds  </li>
+</ul>
+</li>
+</ul>
+<p><strong>Returns</strong>:  - Network<br><a name="Networks#livenet"></a></p>
+<h2 id="networks-livenet">networks.livenet</h2>
+<p><a name="Networks#testnet"></a></p>
+<h2 id="networks-testnet">networks.testnet</h2>
 
       </div>
       <footer id="page-footer">
-        <time id="page-footer-updated" datetime="2015-01-21T19:10:08.000Z" itemprop="dateModified">Last updated: Jan 21 2015</time>
+        <time id="page-footer-updated" datetime="2015-01-28T15:54:25.000Z" itemprop="dateModified">Last updated: Jan 28 2015</time>
         <a href="index.html" id="page-footer-next" title="Get Started">Next</a>
       </footer>
       
